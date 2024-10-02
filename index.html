@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplos de CSS Grid</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- 1. Grid Básico com Linhas e Colunas Definidas -->
+    <section>
+      <h2>Grid Básico com Linhas e Colunas Definidas</h2>
+      <div class="grid-container basico">
+        <div class="item-grid">Item 1</div>
+        <div class="item-grid">Item 2</div>
+        <div class="item-grid">Item 3</div>
+        <div class="item-grid">Item 4</div>
+        <div class="item-grid">Item 5</div>
+        <div class="item-grid">Item 6</div>
+      </div>
+    </section>
+
+    <!-- 2. Uso de repeat(), minmax() e fr -->
+    <section>
+      <h2>Uso de repeat(), minmax() e fr</h2>
+      <div class="grid-container repeat-minmax">
+        <div class="item-grid">Item A</div>
+        <div class="item-grid">Item B</div>
+        <div class="item-grid">Item C</div>
+        <div class="item-grid">Item D</div>
+        <div class="item-grid">Item E</div>
+        <div class="item-grid">Item F</div>
+        <div class="item-grid">Item G</div>
+        <div class="item-grid">Item H</div>
+      </div>
+    </section>
+
+    <!-- 3. Grid Responsivo com auto-fit e minmax() -->
+    <section>
+      <h2>Grid Responsivo com auto-fit e minmax()</h2>
+      <div class="grid-container auto-fit">
+        <div class="item-grid">1</div>
+        <div class="item-grid">2</div>
+        <div class="item-grid">3</div>
+        <div class="item-grid">4</div>
+        <div class="item-grid">5</div>
+        <div class="item-grid">6</div>
+        <div class="item-grid">7</div>
+        <div class="item-grid">8</div>
+        <div class="item-grid">9</div>
+        <div class="item-grid">10</div>
+        <div class="item-grid">11</div>
+        <div class="item-grid">12</div>
+      </div>
+    </section>
+
+    <!-- 4. Grid com Posicionamento de Itens e Sobreposição -->
+    <section>
+      <h2>Grid com Posicionamento de Itens e Sobreposição</h2>
+      <div class="grid-container sobreposicao">
+        <div class="item-grid item1">Item 1</div>
+        <div class="item-grid item2">Item 2</div>
+        <div class="item-grid item3">Item 3</div>
+        <div class="item-grid item4">Item 4</div>
+      </div>
+    </section>
+
+    <!-- 5. Grid com Áreas Nomeadas e Alinhamento -->
+    <section>
+      <h2>Grid com Áreas Nomeadas e Alinhamento</h2>
+      <div class="grid-container areas-nomeadas">
+        <div class="item-grid cabecalho">Cabeçalho</div>
+        <div class="item-grid menu">Menu</div>
+        <div class="item-grid conteudo">Conteúdo</div>
+        <div class="item-grid rodape">Rodapé</div>
+      </div>
+    </section>
+
+    <!-- 6. Grid com Grid Aninhado -->
+    <section>
+      <h2>Grid com Grid Aninhado</h2>
+      <div class="grid-container grid-aninhado">
+        <div class="item-grid">
+          <div class="subgrid-container">
+            <div class="subitem-grid">Subitem 1</div>
+            <div class="subitem-grid">Subitem 2</div>
+            <div class="subitem-grid">Subitem 3</div>
+          </div>
+        </div>
+        <div class="item-grid">Item 2</div>
+        <div class="item-grid">Item 3</div>
+        <div class="item-grid">Item 4</div>
+      </div>
+    </section>
+
+    <!-- 7. Exemplo Prático: Layout Completo de Página -->
+    <section>
+      <h2>Exemplo Prático: Layout Completo de Página</h2>
+      <div class="grid-container layout-pagina">
+        <header class="item-grid header">Cabeçalho</header>
+        <nav class="item-grid nav">Navegação</nav>
+        <aside class="item-grid aside">Barra Lateral</aside>
+        <main class="item-grid main">Conteúdo Principal</main>
+        <footer class="item-grid footer">Rodapé</footer>
+      </div>
+    </section>
+  </body>
+</html>

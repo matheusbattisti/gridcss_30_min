@@ -1,0 +1,197 @@
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-top: 40px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.item-grid {
+  background-color: #2196f3;
+  color: white;
+  padding: 20px;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 5px;
+}
+
+/* 1. Grid Básico com Linhas e Colunas Definidas */
+.basico {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
+}
+
+/* 2. Uso de repeat(), minmax() e fr */
+.repeat-minmax {
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+
+/* 3. Grid Responsivo com auto-fit e minmax() */
+.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+
+/* 4. Grid com Posicionamento de Itens e Sobreposição */
+.sobreposicao {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
+  position: relative;
+}
+
+.sobreposicao .item-grid {
+  background-color: rgba(33, 150, 243, 0.8);
+}
+
+.item1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  z-index: 2;
+}
+
+.item2 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  z-index: 1;
+}
+
+.item3 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.item4 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+/* 5. Grid com Áreas Nomeadas e Alinhamento */
+.areas-nomeadas {
+  grid-template-areas:
+    "cabecalho cabecalho"
+    "menu conteudo"
+    "rodape rodape";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+.cabecalho {
+  grid-area: cabecalho;
+  background-color: #4caf50;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: #2196f3;
+}
+
+.conteudo {
+  grid-area: conteudo;
+  background-color: #f44336;
+}
+
+.rodape {
+  grid-area: rodape;
+  background-color: #9c27b0;
+}
+
+/* Alinhamento */
+.areas-nomeadas {
+  align-items: center;
+  justify-items: center;
+}
+
+/* 6. Grid com Grid Aninhado */
+.grid-aninhado {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.subgrid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.subitem-grid {
+  background-color: #ff9800;
+  padding: 10px;
+  color: #fff;
+}
+
+/* 7. Exemplo Prático: Layout Completo de Página */
+.layout-pagina {
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 500px;
+  grid-gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #f44336;
+  color: #fff;
+}
+
+.main {
+  grid-area: main;
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .layout-pagina {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+}
